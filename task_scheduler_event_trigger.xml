@@ -1,0 +1,5 @@
+<QueryList>
+  <Query Id="0" Path="Microsoft-Windows-TaskScheduler/Operational">
+    <Select Path="Microsoft-Windows-TaskScheduler/Operational">*[EventData[@Name='TaskSucsessEvent'][Data[@Name='TaskName']='\dots_downloader']]</Select>
+  </Query>
+</QueryList>

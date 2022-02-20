@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en-GB'>
+    <head>
+        <title>Breath Counting Task</title>
+    </head>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
+    <style>
+        html, body {margin: 0; height: 100%}
+        body {font-family: 'Raleway', sans-serif;
+            text-align: center;
+            margin-top: 10px;}
+        .arrow {font-size: 50px;}
+        #space {font-size: 25px;}
+    </style>
+
+    <body>
+        <p>This task is about counting your breathing. In this task, you need to repeatedly count your breaths from 1 to 9. 
+            An in and out breath together count as one single breath.</p><br>
+
+        <p>So we can keep track of your breathing, the task here is to press the <strong style="color:green;">UP</strong> arrow on your keyboard for breaths <strong>1-8</strong> in a sequence, once for each breath. On the <strong>9<sup>th</sup></strong> breath, press the <strong style="color:green;">DOWN</strong> arrow on your keyboard.</p><br>
+        
+        <p>Then, indicate your confidence that you kept count of your breath correctly - after the 9th breath, press the <strong style="color:green;">RIGHT</strong> arrow if you are <strong>certain</strong> you counted correctly, or press the <strong style="color:green;">LEFT</strong> arrow if you are <strong>not sure</strong> you pressed the correct arrow.</p><br>
+
+        <p>If you are sure you have <strong>lost count</strong> of your breathing, please press the <strong style="color:red;">SPACEBAR</strong> to start counting from 1 again.</p><br>
+        
+        <p>There is a <u>one minute practice session with feedback</u> on your responses (the order you pressed the keys in), and the main experimental task will last <u>10 minutes</u> and will not give you feedback.</p><br>
+            
+        <p>You don't have to close your eyes for this task, but please only count in your head and not on your fingers. You don't have to control your breathing and can just breathe naturally.</p><br>
+
+        <button type='button' id='ini_button'>Click here to begin the <span id='button_text'>practice trials</span></button>
+        
+        <p>Time left in <span id='timer_text'>practice</span>: <strong><span id='timer'>01:00</span></strong></p><br>
+
+        <div id='arrows'>
+            <span class='arr_desc'><strong>1-8</strong></span><br>
+            <span class='arrow' id='up'>&#x2191</span><br><br>
+            <span class='arrow' id='down'>&#x2193</span><br>
+            <span class='arr_desc'><strong>9</strong></span><br>
+
+            <span class='arr_desc'>Unsure</span>
+            <span class='arrow' id='left'>&#x2190</span>
+            <span class='arrow' id='space'>[SPACEBAR]</span>
+            <span class='arrow' id='right'>&#x2192</span>
+            <span class='arr_desc'>Confident</span><br>
+            <span class='arr_desc'>Lost count</span>
+        </div>
+        
+        <div class='keys_press' id='key_presses'></div>
+        <div id='rt'></div>
+    </body>
+</html>

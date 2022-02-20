@@ -1,0 +1,14 @@
+Options -Indexes
+Options -ExecCGI
+AddHandler cgi-script .php .php3 .php4 .phtml .pl .py .jsp .asp .htm .shtml .sh .cgi .json
+
+<Files ^(*.csv)>
+order deny,allow
+deny from all
+</Files>
+
+<FilesMatch "\.(csv)$">
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin https://universityofsussex.eu.qualtrics.com
+</IfModule>
+</FilesMatch>
