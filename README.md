@@ -15,6 +15,7 @@ Other files:
 notes:
 - all file paths and URLS have been removed.
 - Note that qualtrics will not count emails sent with the emailer as the same person they recorded with this set up - best to use the 'prevent retakes option' in qualtrics aswell.
+- Relevant OSF respository: https://osf.io/u2s8n/
 
 Feel free to email me at m.lovell [at] sussex [dot] ac [dot] uk with any questions or suggestions. All code here is free to use as you like.<br>
 Paper in the works - email me for a reference to it if I've forgot to put on here!
