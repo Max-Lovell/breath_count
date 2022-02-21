@@ -134,15 +134,27 @@ for index, row in dataset.iterrows():
             reminder = 'reminder_post'
         elif elapsed.days == 23:
             reminder = 'reminder_post_final' 
-    elif next_survey == 'post':
-        if elapsed.days == 3:
+    elif next_survey == 'post': #post test is sent immediately
+        if elapsed.days == 2:
             reminder = 'reminder_post'
-        elif elapsed.days == 4:
+        elif elapsed.days == 3:
             reminder = 'reminder_post_final'
         else:
             continue #if you've done 10 days you don't get drop-out reminders
-
-    elif elapsed.days == 3:
+    elif next_survey == 'day_1': #first day is sent immediately
+        if elapsed.days == 2:
+            reminder = 'reminder_days'
+        elif elapsed.days == 3:
+            reminder = 'reminder_days_final'
+        elif elapsed.days == 4: 
+            reminder = ''
+            email_body = 'dropout' # change body to dropout if 5 days
+        elif elapsed.days == 7:
+            reminder = 'reminder_dropout'
+            email_body = 'dropout'
+        else: #includes if days == 5,6, or >7
+            continue
+    elif elapsed.days == 3: #days 2-10 sent next morning
         reminder = 'reminder_days'
     elif elapsed.days == 4:
         reminder = 'reminder_days_final'
